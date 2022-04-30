@@ -20,5 +20,5 @@ def sendMessage(text: str, bot, update: Update):
 def noice(update, context):
     args = update.message.text.split(" ",maxsplit=1)
     if len(args) > 1:
-        link = args[1]
-sendMessage(link, context.bot, update)
+        url = args[1]
+sendMessage(gplinks_bypass(url), context.bot, update)
