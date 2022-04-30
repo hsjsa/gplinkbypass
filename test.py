@@ -1,5 +1,6 @@
 import os
 import telebot
+from telegram.ext import CommandHandler, run_async
 
 API_KEY = "5393668969:AAF4K7yPWA9_F3D0ibYgApSN0aFwdfj-8aw"
 
