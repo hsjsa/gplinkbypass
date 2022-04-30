@@ -20,5 +20,5 @@ def sendMessage(text: str, bot, update: Update):
 def noice(update, context):
     args = update.message.text.split(" ",maxsplit=1)
     if len(args) > 1:
-        url = args[1]
-msg = sendMessage(f"yahoo {url}enjoy", context.bot, update)
+        link = args[1]
+msg = sendMessage(link,context.bot,update)
