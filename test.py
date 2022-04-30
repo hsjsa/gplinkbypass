@@ -8,6 +8,14 @@ from telegram.ext import CommandHandler, run_async
 
 API_KEY = "5393668969:AAF4K7yPWA9_F3D0ibYgApSN0aFwdfj-8aw"
 
+def sendMessage(text: str, bot, update: Update):
+    try:
+        return bot.send_message(update.message.chat_id,
+                            reply_to_message_id=update.message.message_id,
+                            text=text, parse_mode='HTMl')
+    except Exception as e:
+        LOGGER.error(str(e))
+
 @run_async
 def noice(update, context):
     args = update.message.text.split(" ",maxsplit=1)
